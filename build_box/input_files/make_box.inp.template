@@ -1,21 +1,21 @@
 #
-# A mixture of water and benzene
+# A mixture of water and MOLECULE_NAME
 #
 
 tolerance 2.0
 filetype pdb
-output ../mixture.pdb
+output mixture.pdb
 
 # Note: This single_water.pdb must
 # have residue name WAT to be recognied by tleap
-structure single_water.pdb 
+structure input_files/single_water.pdb 
   number 300 
   inside box 0. 0. 0. 22. 22. 22. 
 end structure
 
-# This octane have residue name OCT
+# This MOLECULE_NAME have residue name MOLECULE_ABBR
 # to be used with our frcmod and lib
-structure ../octane.pdb
+structure MOLECULE_NAME.pdb
   number 11
   inside box 0. 0. 0. 22. 22. 22. 
 end structure

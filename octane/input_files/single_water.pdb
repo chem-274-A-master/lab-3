@@ -1,6 +1,0 @@
-REMARK   Single Water PDB
-REMARK   Created:  2024-09-26
-HETATM    1  O   WAT     1       0.084   0.319   0.614  1.00  0.00           O  
-HETATM    2  H1  WAT     1       0.009   1.270   0.690  1.00  0.00           H  
-HETATM    3  H2  WAT     1       1.021   0.144   0.702  1.00  0.00           H  
-END

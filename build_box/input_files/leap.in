@@ -1,0 +1,11 @@
+source leaprc.gaff2
+source leaprc.water.tip3p
+loadAmberParams enflurane.frcmod
+loadoff enflurane.lib
+
+system = loadpdb mixture.pdb
+
+set system box {22.0 22.0 22.0}
+
+saveamberparm system water_enflurane.prmtop water_enflurane.inpcrd
+quit

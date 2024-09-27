@@ -1,0 +1,19 @@
+source leaprc.gaff2
+loadamberparams MOLECULE_NAME.frcmod
+
+MOLECULE_ABBR = loadmol2 MOLECULE_NAME.mol2
+
+# Set the residue name
+set MOLECULE_ABBR name "MOLECULE_ABBR"
+
+# Save off the residue library
+saveoff MOLECULE_ABBR MOLECULE_NAME.lib
+
+# You can also create a unit to check the residue
+MOLECULE_NAME = sequence { MOLECULE_ABBR }
+check MOLECULE_NAME
+
+# Save a PDB to verify the structure (optional)
+savepdb MOLECULE_NAME MOLECULE_NAME_check.pdb
+
+quit

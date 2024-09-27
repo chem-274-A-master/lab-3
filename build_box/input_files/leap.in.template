@@ -1,0 +1,11 @@
+source leaprc.gaff2
+source leaprc.water.tip3p
+loadAmberParams MOLECULE_NAME.frcmod
+loadoff MOLECULE_NAME.lib
+
+system = loadpdb mixture.pdb
+
+set system box {22.0 22.0 22.0}
+
+saveamberparm system water_MOLECULE_NAME.prmtop water_MOLECULE_NAME.inpcrd
+quit

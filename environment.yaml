@@ -9,6 +9,7 @@ dependencies:
   - pandas
   - mdtraj
   - mdanalysis
+  - ambertools
   - pip
   - pip:
       - nglview  

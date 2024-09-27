@@ -10,7 +10,7 @@ environment: remove-env
 remove-env:
 	conda remove --name $(ENVIRONMENT) --all --yes
 
-# Clean target to remove files except 'build_sys.sh' in 'octane' and 'carbitol' directories, but not in subdirectories
+# Clean target to remove files except 'build_sys.sh' in 'octane' and 'diethylene_glycol' directories, but not in subdirectories
 clean:
-	@find octane carbitol -maxdepth 1 -type f ! -name 'build_sys.sh' -delete
+	@find octane diethylene_glycol -maxdepth 1 -type f ! -name 'build_sys.sh' -delete
 

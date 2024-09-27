@@ -1,0 +1,19 @@
+source leaprc.gaff2
+loadamberparams ../diethylene_glycol.frcmod
+
+DEG = loadmol2 ../diethylene_glycol.mol2
+
+# Set the residue name
+set DEG name "DEG"
+
+# Save off the residue library
+saveoff DEG ../diethylene_glycol.lib
+
+# You can also create a unit to check the residue
+diethylene_glycol = sequence { DEG }
+check diethylene_glycol
+
+# Save a PDB to verify the structure
+savepdb diethylene_glycol ../diethylene_glycol_check.pdb
+
+quit

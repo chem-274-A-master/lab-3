@@ -1,4 +1,4 @@
-%VERSION  VERSION_STAMP = V0001.000  DATE = 09/27/24  00:06:15                  
+%VERSION  VERSION_STAMP = V0001.000  DATE = 09/27/24  09:00:37                  
 %FLAG TITLE                                                                     
 %FORMAT(20a4)                                                                   
 default_name                                                                    
@@ -899,7 +899,7 @@ H2  O   H1  H2  O   H1  H2  O   H1  H2  O   H1  H2
       33      34      35      36
 %FLAG RESIDUE_LABEL                                                             
 %FORMAT(20a4)                                                                   
-CAR CAR CAR CAR CAR CAR CAR CAR CAR CAR CAR WAT WAT WAT WAT WAT WAT WAT WAT WAT 
+DEG DEG DEG DEG DEG DEG DEG DEG DEG DEG DEG WAT WAT WAT WAT WAT WAT WAT WAT WAT 
 WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT 
 WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT 
 WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT WAT 

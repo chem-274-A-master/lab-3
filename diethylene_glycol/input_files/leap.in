@@ -1,0 +1,11 @@
+source leaprc.gaff2
+source leaprc.water.tip3p
+loadAmberParams diethylene_glycol.frcmod
+loadoff diethylene_glycol.lib
+
+system = loadpdb mixture.pdb
+
+set system box {20.0 20.0 20.0}
+
+saveamberparm system water_diethylene_glycol.prmtop water_diethylene_glycol.inpcrd
+quit

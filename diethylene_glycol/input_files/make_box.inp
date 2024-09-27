@@ -15,7 +15,7 @@ end structure
 
 # This octane have residue name OCT
 # to be used with our frcmod and lib
-structure ../carbitol.pdb
+structure ../diethylene_glycol.pdb
   number 11
   inside box 0. 0. 0. 22. 22. 22. 
 end structure

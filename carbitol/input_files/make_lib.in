@@ -1,19 +1,19 @@
 source leaprc.gaff2
-loadamberparams carbitol.frcmod
+loadamberparams ../carbitol.frcmod
 
-CAR = loadmol2 carbitol.mol2
+CAR = loadmol2 ../carbitol.mol2
 
 # Set the residue name
 set CAR name "CAR"
 
 # Save off the residue library
-saveoff CAR carbitol.lib
+saveoff CAR ../carbitol.lib
 
 # You can also create a unit to check the residue
 carbitol = sequence { CAR }
 check carbitol
 
-# Save a PDB to verify the structure (optional)
-savepdb carbitol carbitol_check.pdb
+# Save a PDB to verify the structure
+savepdb carbitol ../carbitol_check.pdb
 
 quit

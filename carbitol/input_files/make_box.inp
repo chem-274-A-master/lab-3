@@ -4,7 +4,7 @@
 
 tolerance 2.0
 filetype pdb
-output mixture.pdb
+output ../mixture.pdb
 
 # Note: This single_water.pdb must
 # have residue name WAT to be recognied by tleap
@@ -13,9 +13,9 @@ structure single_water.pdb
   inside box 0. 0. 0. 22. 22. 22. 
 end structure
 
-# This carbitol have residue name CAR
+# This octane have residue name OCT
 # to be used with our frcmod and lib
-structure carbitol.pdb
+structure ../carbitol.pdb
   number 11
   inside box 0. 0. 0. 22. 22. 22. 
 end structure

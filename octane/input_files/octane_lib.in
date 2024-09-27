@@ -1,0 +1,19 @@
+source leaprc.gaff2
+loadamberparams octane.frcmod
+
+OCT = loadmol2 octane.mol2
+
+# Set the residue name
+set OCT name "OCT"
+
+# Save off the residue library
+saveoff OCT octane.lib
+
+# You can also create a unit to check the residue
+octane = sequence { OCT }
+check octane
+
+# Save a PDB to verify the structure (optional)
+savepdb octane octane_check.pdb
+
+quit

@@ -1,0 +1,22 @@
+#
+# A mixture of water and benzene
+#
+
+tolerance 2.0
+filetype pdb
+output mixture.pdb
+
+# Note: This single_water.pdb must
+# have residue name WAT to be recognied by tleap
+structure single_water.pdb 
+  number 300 
+  inside box 0. 0. 0. 22. 22. 22. 
+end structure
+
+# This carbitol have residue name CAR
+# to be used with our frcmod and lib
+structure carbitol.pdb
+  number 11
+  inside box 0. 0. 0. 22. 22. 22. 
+end structure
+

@@ -9,6 +9,8 @@ COMPOUND_CID="3226"
 wget "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/${COMPOUND_CID}/record/SDF/?record_type=3d" -O ${MOLECULE_NAME}.sdf
 
 # Make a mol2 file with charges calculated by bccc and atom types assigned by gaff2
+# we have to get partial charge for the electrostatic calculation for the forcefield.
+mkdir -p antechamber
 cd antechamber
 antechamber -i ../${MOLECULE_NAME}.sdf -fi sdf -o ../${MOLECULE_NAME}.mol2 -fo mol2 -c bcc -at gaff2
 
@@ -16,10 +18,10 @@ antechamber -i ../${MOLECULE_NAME}.sdf -fi sdf -o ../${MOLECULE_NAME}.mol2 -fo m
 antechamber -i ../${MOLECULE_NAME}.mol2 -fi mol2 -o ../${MOLECULE_NAME}.pdb -fo pdb -c bcc -at gaff2
 cd ../
 
-# Make sure the pdb file has the correct residue names
+# Make the pdb file have the correct residue names
 sed -i "s/\bMOL\b/${MOLECULE_ABBR}/g" ${MOLECULE_NAME}.pdb
 
-# Make sure the mol2 file has the correct residue names
+# Make the mol2 file have the correct residue names
 sed -i "s/\bMOL\b/${MOLECULE_ABBR}/g" ${MOLECULE_NAME}.mol2
 
 # Use parmchk to generate a parameter file

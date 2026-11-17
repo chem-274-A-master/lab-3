@@ -3,13 +3,12 @@ import numpy as np
 import numpy as np
 import MDAnalysis as mda
 from MDAnalysis.analysis.distances import distance_array
-import networkx as nx
 import matplotlib.pyplot as plt
 
 def build_supercell(u, frame_number=-1):
 
-    # Move to the last frame of the trajectory
-    u.trajectory[-1]
+    # Move to the requested frame (the last frame by default)
+    u.trajectory[frame_number]
     
     # Get the atom positions and box dimensions
     positions = u.atoms.positions

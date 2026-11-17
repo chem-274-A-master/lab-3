@@ -3,7 +3,7 @@
 
 ENVIRONMENT=chem274A_lab3
 
-environment: remove-env
+environment:
 	conda env create -f environment.yaml
 
 remove-env:
